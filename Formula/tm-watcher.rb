@@ -2,14 +2,14 @@ class TmWatcher < Formula
   desc "Automatically manage macOS Time Machine exclusions for development directories"
   homepage "https://github.com/zzerding/tm-exclude-watcher"
   license "MIT"
-  version "0.2.0"
+  version "0.3.0"
 
   if Hardware::CPU.arm?
-    url "https://github.com/zzerding/tm-exclude-watcher/releases/download/v0.2.0/tm-watcher-v0.2.0-aarch64-apple-darwin.tar.gz"
-    sha256 "9a31930dd6d58276bc2cfbe2ef0235c8baf51cacdf39119f14732952431ae9a3"
+    url "https://github.com/zzerding/tm-exclude-watcher/releases/download/v0.3.0/tm-watcher-v0.3.0-aarch64-apple-darwin.tar.gz"
+    sha256 "7148a22636fb71dbf67489399647d6cfa49fbb5cced514b80e9d199844f2fdfe"
   else
-    url "https://github.com/zzerding/tm-exclude-watcher/releases/download/v0.2.0/tm-watcher-v0.2.0-x86_64-apple-darwin.tar.gz"
-    sha256 "9124b6804f8d887815afec7723ea67ff407f773e559ca23ed3c25564e0099ceb"
+    url "https://github.com/zzerding/tm-exclude-watcher/releases/download/v0.3.0/tm-watcher-v0.3.0-x86_64-apple-darwin.tar.gz"
+    sha256 "987bd7988152b304353ee0941a3e0f63752732bdd9b64fd97abbb5d260d0e75e"
   end
 
   def install
@@ -26,13 +26,13 @@ class TmWatcher < Formula
       tm-watcher is installed but not started automatically.
 
       To enable background monitoring:
-        tm-watcher start
+        tm-watcher daemon start
 
       To check daemon status:
-        tm-watcher status
+        tm-watcher daemon status
 
       To stop background monitoring:
-        tm-watcher stop
+        tm-watcher daemon stop
     EOS
   end
 end
